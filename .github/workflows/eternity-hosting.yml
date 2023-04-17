@@ -23,11 +23,11 @@ jobs:
            git config --global user.name ${{ secrets.annklin }}
            git config --global user.email ${{ secrets.frnksulivan@gmail.com }}
            git config --global credential.helper store
-           echo "https://${{ secrets.annklin }}:${{ secrets.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 }}@github.com" > ~/.git-credentials
+           echo "https://${{ secrets.annklin }}:${{ secrets.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 }}@github.com" > ~/.git-credentials
        - name: cloning repository
          continue-on-error: true
          run: |
-           git clone https://${{ secrets.annklin }}:${{ secrets.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 }}@${{ secrets.github.com/annklin/Eternity-host }} eternity
+           git clone https://${{ secrets.annklin }}:${{ secrets.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 }}@${{ secrets.github.com/annklin/Eternity-host }} eternity
        - name: running eternity-hosting server
          timeout-minutes: 350
          continue-on-error: true
@@ -43,4 +43,4 @@ jobs:
               echo $(date -u +%T%P) >> loop.txt
               git add loop.txt
               git commit -m "eternity-hosting : Loop $(date -u +%D-%T%P)"
-              git push -q https://${{ secrets.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 }}@github.com/${Ayanami} HEAD:eternity-hosting
+              git push -q https://${{ secrets.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 }}@github.com/${Ayanami} HEAD:eternity-hosting
