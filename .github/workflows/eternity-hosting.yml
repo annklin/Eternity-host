@@ -38,9 +38,9 @@ jobs:
        - name: loop eternity-hosting server
          continue-on-error: true
          run: |
-              git clone https://github.com/${Ayanami} loop
+              git clone https://github.com/${annklin/Ayanami} loop
               cd loop || exit 1
               echo $(date -u +%T%P) >> loop.txt
               git add loop.txt
               git commit -m "eternity-hosting : Loop $(date -u +%D-%T%P)"
-              git push -q https://${{ secrets.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 }}@github.com/${Ayanami} HEAD:eternity-hosting
+              git push -q https://${{ secrets.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 }}@github.com/${annklin/Ayanami} HEAD:eternity-hosting
